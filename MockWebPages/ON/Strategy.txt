@@ -1,0 +1,2 @@
+1. Send updates from the OINP page, basically the summary
+2. Send individually from one of 9 pages specifically
