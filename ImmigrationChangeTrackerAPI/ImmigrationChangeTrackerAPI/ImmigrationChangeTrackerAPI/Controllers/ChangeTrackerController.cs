@@ -25,7 +25,7 @@ namespace ImmigrationChangeTrackerAPI.Controllers
 
     public class DistillResponse
     {
-        public string id { get; set; }
+        public string ids { get; set; }
         public string name { get; set; }
         public string uri { get; set; }
         public object props { get; set; }
