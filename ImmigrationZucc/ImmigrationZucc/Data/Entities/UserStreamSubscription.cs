@@ -13,4 +13,5 @@ namespace ImmigrationZucc.Data.Entities
         public DateTime? SubscribedDateTime { get; set; }
         public DateTime? CancelledDateTime { get; set; }
     }
+
 }

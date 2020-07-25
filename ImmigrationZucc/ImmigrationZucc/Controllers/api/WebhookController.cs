@@ -22,6 +22,9 @@ namespace ImmigrationZucc.Controllers.api
         {
             var distillChangeDTO = JsonConvert.DeserializeObject<DistillChangeDTO>(response.data.ToString());
 
+            //get the users who subscribe to this -> get their phone numbers
+
+            //generate the diff compared to last update from the website
 
             return Ok();
         }
