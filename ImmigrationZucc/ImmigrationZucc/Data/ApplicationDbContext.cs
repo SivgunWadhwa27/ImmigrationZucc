@@ -8,6 +8,7 @@ namespace ImmigrationZucc.Data
     {
         public DbSet<Stream> Streams { get; set; }
         public DbSet<UserStreamSubscription> UserStreamSubscriptions { get; set; }
+        public DbSet<WebhookEvent>  WebhookEvents { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

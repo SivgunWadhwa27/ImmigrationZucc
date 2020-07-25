@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\PNPZuck\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc.csproj": {}
+    "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\ZuccRepo\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\PNPZuck\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc.csproj": {
+    "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\ZuccRepo\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\PNPZuck\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc.csproj",
+        "projectUniqueName": "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\ZuccRepo\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc.csproj",
         "projectName": "ImmigrationZucc",
-        "projectPath": "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\PNPZuck\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc.csproj",
+        "projectPath": "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\ZuccRepo\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc.csproj",
         "packagesPath": "C:\\Users\\SivgunWadhwa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\PNPZuck\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\obj\\",
+        "outputPath": "C:\\Users\\SivgunWadhwa\\Desktop\\Personal\\ZuccRepo\\ImmigrationZucc\\ImmigrationZucc\\ImmigrationZucc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -59,6 +59,10 @@
               "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"
             }

@@ -1,4 +1,4 @@
-﻿namespace ImmigrationZucc.Data.Entities
+﻿namespace ImmigrationZucc.Core.Enums
 {
     public enum StreamType
     {

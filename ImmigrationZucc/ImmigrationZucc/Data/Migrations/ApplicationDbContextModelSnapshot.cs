@@ -32,8 +32,8 @@ namespace ImmigrationZucc.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("StreamType")
-                        .HasColumnType("int");
+                    b.Property<string>("StreamCode")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("StreamId");
 
@@ -69,6 +69,27 @@ namespace ImmigrationZucc.Data.Migrations
                     b.HasIndex("UserId1");
 
                     b.ToTable("UserStreamSubscriptions");
+                });
+
+            modelBuilder.Entity("ImmigrationZucc.Data.Entities.WebhookEvent", b =>
+                {
+                    b.Property<long>("WebhookEventId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SourceUri")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StreamCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("WebhookEventId");
+
+                    b.ToTable("WebhookEvents");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
