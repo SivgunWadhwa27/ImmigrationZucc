@@ -12,6 +12,8 @@ using ImmigrationZucc.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ImmigrationZucc.Infrastructure.Services;
+using ImmigrationZucc.Infrastructure.Repositories;
 
 namespace ImmigrationZucc
 {
@@ -34,6 +36,9 @@ namespace ImmigrationZucc
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddScoped<IUpdateNotificationService, UpdateNotificationService>();
+            services.AddScoped<IUserStreamSubscriptionRepository, UserStreamSubscriptionRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
