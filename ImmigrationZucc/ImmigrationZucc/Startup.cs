@@ -38,7 +38,10 @@ namespace ImmigrationZucc
             services.AddRazorPages();
 
             services.AddScoped<IUpdateNotificationService, UpdateNotificationService>();
+
             services.AddScoped<IUserStreamSubscriptionRepository, UserStreamSubscriptionRepository>();
+            services.AddScoped<IStreamRepository, StreamRepository>();
+            services.AddScoped<IWebhookEventRepository, WebhookEventRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

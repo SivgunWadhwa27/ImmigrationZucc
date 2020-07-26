@@ -1,12 +1,15 @@
-﻿using ImmigrationZucc.Infrastructure.Repositories;
+﻿using ImmigrationZucc.Infrastructure.Configuration;
+using ImmigrationZucc.Infrastructure.Repositories;
 using ImmigrationZucc.Infrastructure.Utilities;
 using System.Threading.Tasks;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace ImmigrationZucc.Infrastructure.Services
 {
     public interface IUpdateNotificationService
     {
-        Task SendUpdateNotifications(long streamId, string changedText);
+        Task SendUpdateNotifications(string streamCode, string changedText);
     }
 
     public class UpdateNotificationService : IUpdateNotificationService
@@ -19,17 +22,27 @@ namespace ImmigrationZucc.Infrastructure.Services
             _stream = stream;
         }
 
-        public async Task SendUpdateNotifications(long streamId, string changedText)
+        public async Task SendUpdateNotifications(string streamCode, string changedText)
         {
+            //get the stream
+            var stream = _stream.GetByStreamCode(streamCode);
+
             //get the users who subscribe to this -> get their phone numbers
-            var subscriberPhoneNumberList = _userStreamSubscription.GetStreamSubscribersPhoneNumbers(streamId);
+            var subscriberPhoneNumberList = _userStreamSubscription.GetStreamSubscribersPhoneNumbers(stream.StreamId);
 
             //generate the diff compared to last update from the website
-            var stream = _stream.GetById(streamId);
             var diff = DiffMatchPatchUtil.GetPatchedString(stream.TextBlob, changedText);
 
             //send out the messages
-
+            TwilioClient.Init(AppSettings.TwilioSettings.AccountSid, AppSettings.TwilioSettings.AuthToken);
+            foreach(var phoneNumber in subscriberPhoneNumberList)
+            {
+                var message = await MessageResource.CreateAsync(
+                    body: $"\"{diff}\". Go to {stream.Url}",
+                    from: new Twilio.Types.PhoneNumber( AppSettings.TwilioSettings.PhoneNumber),
+                    to: new Twilio.Types.PhoneNumber($"+1{phoneNumber}")
+                );
+            }
         }
     }
 

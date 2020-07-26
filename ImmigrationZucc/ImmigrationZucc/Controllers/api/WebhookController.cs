@@ -19,41 +19,28 @@ namespace ImmigrationZucc.Controllers.api
     {
         private IUpdateNotificationService _updateNotificationService;
         private ApplicationDbContext _context;
-        private IStreamRepository _stream;
+        private IWebhookEventRepository _webhookEvent;
+
         public WebhookController(
             IUpdateNotificationService updateNotificationService,
             ApplicationDbContext context,
-            IStreamRepository stream
+            IWebhookEventRepository webhookEvent
         )
         {
             _updateNotificationService = updateNotificationService;
             _context = context;
-            _stream = stream;
+            _webhookEvent = webhookEvent;
         }
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] WebhookResponseDTO response)
         {
-            var distillChangeDTO = JsonConvert.DeserializeObject<DistillChangeDTO>(response.data.ToString());
-
             //log webhook event
-            var webhookEvent = new WebhookEvent()
-            {
-                StreamCode = response.streamCode,
-                SourceUri = response.uri,
-                DateTime = DateTime.UtcNow
-            };
-            _context.WebhookEvents.Add(webhookEvent);
+            _webhookEvent.Insert(response.streamCode, response.uri);
             _context.SaveChanges();
 
-
-            var stream = _stream.GetByStreamCode(response.streamCode);
-            //get the users who subscribe to this -> get their phone numbers
-
-            await _updateNotificationService.SendUpdateNotifications(stream.StreamId, distillChangeDTO.text);
-            //get the diff compared to last update from the website
-            
-            //send out the messages
+            var distillChangeDTO = JsonConvert.DeserializeObject<DistillChangeDTO>(response.data.ToString());
+            await _updateNotificationService.SendUpdateNotifications(response.streamCode, distillChangeDTO.text);
 
             return Ok();
         }

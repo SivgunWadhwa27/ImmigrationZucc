@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ImmigrationZucc.Data.Entities
 {
@@ -13,5 +10,6 @@ namespace ImmigrationZucc.Data.Entities
         public DateTime? UpdatedOnDateTime { get; set; }
         public string TextBlob { get; set; }
         public bool IsActive { get; set; }
+        public string Url { get; set; }
     }
 }

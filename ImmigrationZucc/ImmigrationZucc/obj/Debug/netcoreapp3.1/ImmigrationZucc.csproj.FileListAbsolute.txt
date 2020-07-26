@@ -234,5 +234,10 @@ C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\
 C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\bin\Debug\netcoreapp3.1\Twilio.dll
 C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\obj\Debug\netcoreapp3.1\ImmigrationZucc.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\SivgunWadhwa\Desktop\Personal\ZuccRepo\ImmigrationZucc\ImmigrationZucc\ImmigrationZucc\obj\Debug\netcoreapp3.1\ImmigrationZucc.MvcApplicationPartsAssemblyInfo.cache
