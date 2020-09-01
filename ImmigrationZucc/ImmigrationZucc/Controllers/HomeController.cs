@@ -2,8 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ImmigrationZucc.Models;
 using ImmigrationZucc.Data;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ImmigrationZucc.Controllers
 {
